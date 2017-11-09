@@ -87,10 +87,10 @@ app.get('/lobby/:id', (req, res) => {
   }).catch(err => console.log(err));
 
 
-  Promise.all([messages, members]).then((ret) => {
+  Promise.all([messages, members]).then(([messages, members]) => {
     res.json({
-      members: ret[1],
-      messages: ret[0],
+      members,
+      messages,
       lobbyId: req.params.id
     });
     //ret.lobbyId = req.params.id;
