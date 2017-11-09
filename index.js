@@ -16,7 +16,7 @@ const ioSession = require('express-socket.io-session');
 const secret = process.env.COOKIE_SECRET;
 // const ports = [80, 443];
 
-server.listen(8000);
+server.listen(9001);
 
 passport.serializeUser((user, done) => {
   done(null, user);
